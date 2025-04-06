@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 */
 @Mapper
 public interface Tiezi0Mapper extends BaseMapper<Tiezi0> {
-
 }
 
 
