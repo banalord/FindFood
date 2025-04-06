@@ -4,8 +4,10 @@ package com.kuang.cachestudy.control;
 import com.kuang.cachestudy.pojo.Tiezi0;
 import com.kuang.cachestudy.service.Tiezi0Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,11 @@ public class Tiezi0Controller {
     public List<Tiezi0> getTiezi0(){
         List<Tiezi0> list = tiezi0Service.list();
         return list;
+    }
+
+    @DeleteMapping("/deleteTiezi0")
+    @CacheEvict(value = "AllTiezi")
+    public void deleteTiezi0(){
     }
 
     @GetMapping("/getTiezi")
