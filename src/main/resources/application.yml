@@ -5,9 +5,9 @@ spring:
     url: jdbc:mysql://localhost:3306/cachestudy?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: 120.79.247.157
+    host: yourhost
     port: 6379
-    password: Ec09ersi@
+    password: yourpassword
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.kuang.cachestudy.pojo

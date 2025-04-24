@@ -1,15 +1,16 @@
 package com.kuang.cachestudy.control;
 
 import com.kuang.cachestudy.service.PostsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 @RestController
 public class PostController {
-    @Autowired
+    @Resource
     private PostsService postsService;
 
     // 点赞操作
